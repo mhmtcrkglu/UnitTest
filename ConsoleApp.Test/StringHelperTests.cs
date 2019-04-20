@@ -24,5 +24,20 @@ namespace ConsoleApp.Test
             Assert.AreEqual(waitingResult, comingResult);
 
         }
+
+        [TestMethod]
+        public void Clear_Relative_Space()
+        {
+            //Arrange
+            var input = "We          have    to  go        there.";
+            var waitingResult = "We have to go there.";
+
+            //Act
+            var comingResult = StringHelper.ClearSpaces(input);
+
+            //Assert
+            Assert.AreEqual(waitingResult, comingResult);
+        }
+
     }
 }
